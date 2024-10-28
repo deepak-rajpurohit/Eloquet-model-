@@ -8,3 +8,10 @@ Route::get('/', function () {
 });
 
 Route::get('users', [UserController::class, 'user']);
+Route::post('users', [UserController::class, 'post']);
+Route::put('users', [UserController::class, 'put']);
+Route::delete('users', [UserController::class, 'delete']);
+
+
+
+Route::view('form','user');

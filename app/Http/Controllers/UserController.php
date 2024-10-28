@@ -42,4 +42,13 @@ class UserController extends Controller
         }
         // return view('user', ['users'=>$response]);
     }
+    function post(){
+        return "this is a post method function";
+    }
+    function put(){
+        return "This is a put method function";
+    }
+    function delete(){
+        return 'This is a delete method function';
+    }
 }
