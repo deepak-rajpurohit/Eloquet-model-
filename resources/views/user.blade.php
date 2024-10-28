@@ -21,7 +21,7 @@
 
     <form action="/users" method="post">
         @csrf
-        <input type="hidden" name="_method" value="DELETE">
+        {{-- <input type="hidden" name="_method" value="DELETE"> --}}
         <input type="text" name="user_name" placeholder="Enter your name">
     <br>
     <br>

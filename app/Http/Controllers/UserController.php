@@ -51,4 +51,13 @@ class UserController extends Controller
     function delete(){
         return 'This is a delete method function';
     }
+    function any(){
+        return "This is any function";
+    }
+    function group1(){
+        return "This is group 1";
+    }
+    function group2(){
+        return "This is group 2";
+    }
 }
