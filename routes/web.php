@@ -14,6 +14,11 @@ Route::get('/', function () {
 
 //Route::any('users',[UserController::class,'any']);
 
-Route::match(['post','get'], '/users',[UserController::class,'group1']);
-Route::match(['put','delete'], '/users',[UserController::class,'group2']);
+// Route::match(['post','get'], '/users',[UserController::class,'group1']);
+// Route::match(['put','delete'], '/users',[UserController::class,'group2']);
+
+//HTTP Request class
+
+Route::post( 'users', [UserController::class,'login']);
 Route::view('form','user');
+

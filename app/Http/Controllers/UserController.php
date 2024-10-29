@@ -33,31 +33,63 @@ class UserController extends Controller
         // }else{
         //     return "data not updated";
         // }
-        $response= Users::where('id', '5')->delete();
+    //     $response= Users::where('id', '5')->delete();
 
-        if($response){
-            return "data dleted";
-        }else{
-            return "data not deleted";
-        }
-        // return view('user', ['users'=>$response]);
+    //     if($response){
+    //         return "data dleted";
+    //     }else{
+    //         return "data not deleted";
+    //     }
+    //     // return view('user', ['users'=>$response]);
+    // }
+    // function post(){
+    //     return "this is a post method function";
+    // }
+    // function put(){
+    //     return "This is a put method function";
+    // }
+    // function delete(){
+    //     return 'This is a delete method function';
+    // }
+    // function any(){
+    //     return "This is any function";
+    // }
+    // function group1(){
+    //     return "This is group 1";
+    // }
+    // function group2(){
+    //     return "This is group 2";
+    // }
+
+}
+function login(Request $request){
+    echo "Request method is ". $request->method();
+    echo "</br>";
+    echo "Request path is ". $request->path();
+    echo "</br>";
+    echo "Request url is ". $request->url();
+    echo "</br>";
+    echo "Request name is ". $request->user_name; //input('user_name');
+    echo "</br>";
+    print_r($request->input());
+    echo "</br>";
+    print_r($request->collect());
+    echo "</br>";
+    if($request->isMethod('post')){
+        echo "execute code for post request";
+    }else{
+        echo "execute code for other request";
     }
-    function post(){
-        return "this is a post method function";
+    echo "</br>";
+
+    if($request->is('users')){
+        echo "execute code for users path";
+    }else{
+        echo "execute code for other path";
     }
-    function put(){
-        return "This is a put method function";
-    }
-    function delete(){
-        return 'This is a delete method function';
-    }
-    function any(){
-        return "This is any function";
-    }
-    function group1(){
-        return "This is group 1";
-    }
-    function group2(){
-        return "This is group 2";
-    }
+
+    echo "</br>";
+    echo "Request IP is ". $request->ip();
+}
+
 }

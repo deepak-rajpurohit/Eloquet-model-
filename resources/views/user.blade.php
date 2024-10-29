@@ -1,5 +1,5 @@
 <div>
-    <h1>User data</h1>
+    {{-- <h1>User data</h1> --}}
     {{-- <table border="2">
         <tr>
            <td>ID</td>
@@ -19,9 +19,9 @@
         @endforeach
     </table> --}}
 
-    <form action="/users" method="post">
+    {{-- <form action="/users" method="post">
         @csrf
-        {{-- <input type="hidden" name="_method" value="DELETE"> --}}
+        <input type="hidden" name="_method" value="DELETE">
         <input type="text" name="user_name" placeholder="Enter your name">
     <br>
     <br>
@@ -29,6 +29,16 @@
     <br>
     <br>
     <button>Submit</button>
-    </form>
+    </form> --}}
     <!-- I begin to speak only when I am certain what I will say is not better left unsaid. - Cato the Younger -->
+    <h1>User Login</h1>
+    <form action="users" method="POST">
+        @csrf
+        <input type="text" name="user_name" placeholder="Enter your name"/>
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="Enter Your password "/>
+        <br><br>
+        <button>Login</button>
+    </form>
 </div>
